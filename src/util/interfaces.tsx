@@ -7,3 +7,10 @@ export interface ITweetResume {
     profileLink: string,
     tweetLink: string,
 };
+
+export interface IUserResume {
+    username: string,
+    user: string,
+    incidences: number,
+    profileLink: string,
+};
