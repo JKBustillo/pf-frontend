@@ -1,0 +1,25 @@
+.tweet-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    p {
+        margin: 10px 0;
+    }
+
+    .tweet-one {
+        text-align: start;
+        
+        .username-p {
+            font-weight: bold;
+        }
+    }
+
+    .tweet-two {
+        text-align: end;
+    }
+}
