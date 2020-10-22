@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+import './App.scss';
+import Header from './components/Header';
+import LastAnalyzedTweets from './components/LastAnalyzedTweets';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      <div className="home-container">
+        <LastAnalyzedTweets />
+        <h1>Graficas aquí</h1>
+        <h1>Otros datos aquí</h1>
+      </div>
+    </Fragment>
   );
 }
 
