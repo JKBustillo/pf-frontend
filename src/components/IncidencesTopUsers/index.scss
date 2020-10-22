@@ -1,0 +1,17 @@
+.topUsers-container {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 261px);
+
+    .topUsers-p {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    .topUsers-list {
+        overflow-y: scroll;
+    }
+}
