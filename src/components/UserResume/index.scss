@@ -1,0 +1,21 @@
+.user-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+
+    p {
+        margin: 8px 0;
+        font-size: 18px;
+    }
+
+    .user-left {
+        text-align: start;
+    }
+
+    .user-right {
+        text-align: end;
+    }
+}
