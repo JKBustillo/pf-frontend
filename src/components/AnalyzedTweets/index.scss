@@ -1,0 +1,26 @@
+.analyzedTweets-containter {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    p {
+        font-size: 20px;
+    }
+
+    .analyzedTweets-data {
+        h2 {
+            margin-top: 10px;
+        }
+
+        display: flex;
+        justify-content: space-between;
+
+        .analyzedTweets-left {
+            text-align: start;
+        }
+
+        .analyzedTweets-right {
+            text-align: end;
+        }
+    }
+}
