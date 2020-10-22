@@ -13,7 +13,19 @@ const Tweet = (props: {tweet: ITweetResume}) => {
             <div className="tweet-two">
                 <p>Polarización: {props.tweet.polarizationRate}</p>
                 <p>Político: {props.tweet.politicalRate}</p>
-                <p><a href={props.tweet.profileLink}>Ir al perfil</a> <a href={props.tweet.tweetLink}>Ver detalles</a></p>
+                <p>
+                    <a
+                        href={props.tweet.profileLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Ir al perfil</a>
+                    &nbsp;
+                    <a
+                        href={props.tweet.tweetLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Ver detalles</a>
+                </p>
             </div>
         </div>
     );
