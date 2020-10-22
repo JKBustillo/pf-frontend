@@ -3,4 +3,9 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
+
+    .home-otherData {
+        display: flex;
+        flex-direction: column;
+    }
 }
