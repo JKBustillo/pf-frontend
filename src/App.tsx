@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import './App.scss';
 import AnalyzedTweets from './components/AnalyzedTweets';
+import ChartsHome from './components/ChartsHome';
 import Header from './components/Header';
 import IncidencesTopUsers from './components/IncidencesTopUsers';
 import LastAnalyzedTweets from './components/LastAnalyzedTweets';
@@ -11,7 +12,7 @@ function App() {
       <Header />
       <div className="home-container">
         <LastAnalyzedTweets />
-        <h1>Graficas aquí</h1>
+        <ChartsHome />
         <div className="home-otherData">
           <AnalyzedTweets />
           <IncidencesTopUsers />
