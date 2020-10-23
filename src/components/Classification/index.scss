@@ -1,0 +1,29 @@
+.classification {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    background-color: white;
+
+    p {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    button {
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+        border-radius: 30px;
+        margin: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .pol {
+        background-color: red;
+    }
+
+    .nopol {
+        background-color: green;
+    }
+}
