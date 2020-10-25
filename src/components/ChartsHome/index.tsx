@@ -1,5 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
+import { Map, Marker, TileLayer } from 'react-leaflet';
+import MarkerClusterGroup from "react-leaflet-markercluster";
 import './index.scss';
 
 const state = {
@@ -13,7 +15,6 @@ const state = {
         }
     ],
 }
-
  
 const ChartsHome = () => {
     return (
@@ -30,18 +31,252 @@ const ChartsHome = () => {
                     },
                 }}
             />
-            <Line
-                data={state}
-                height={280}
-                width={560}
-                options={{
-                    title:{
-                        display:true,
-                        text:'Gráfica de tweets políticos analizados',
-                        fontSize:20
-                    },
-                }}
-            />
+            <Map className="map" center={[4.60971, -74.08175]} zoom={6}>
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                />
+                <MarkerClusterGroup>
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[10.96854, -74.78132]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[6.25184, -75.56359]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                    <Marker position={[4.60971, -74.08175]} />
+                </MarkerClusterGroup>
+            </Map>
         </div>
     );
 }
