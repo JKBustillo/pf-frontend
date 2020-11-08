@@ -14,3 +14,7 @@ export interface IUserResume {
     incidences: number,
     profileLink: string,
 };
+
+export interface IParams {
+    user: string
+};
