@@ -2,6 +2,8 @@
     width: 40%;
     padding: 20px 30px;
     background-color: white;
+    height: calc(100vh - 104px);
+    overflow-y: scroll;
 
     .profile-top {
         display: flex;
@@ -53,5 +55,18 @@
         height: 2px;
         background-color: gray;
         margin-left: -30px;
+    }
+
+    .profile-lastTweets {
+        height: 400px;
+
+        .ultimos-p {
+            margin: 20px 20px 20px;
+        }
+    
+        .lastAnalized-tweet-list {
+            height: 357px;
+            overflow-y: scroll;
+        }
     }
 }
