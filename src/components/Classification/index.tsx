@@ -8,7 +8,7 @@ const Classificaction = () => {
     const [sentimental, setSentimental] = useState("");
 
     const getTweet = async () => {
-        const response = await axios('http://18.212.238.167:3000/tweet/random');
+        const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/random`);
         setText(response.data.text);
         setSentimental(response.data.sentimentScore.predominant);
         setId(response.data._id);
@@ -19,7 +19,7 @@ const Classificaction = () => {
     }, []);
 
     const updatePolitical = async (value: Boolean) => {
-        await axios.put('http://18.212.238.167:3000/tweet/random', {
+        await axios.put(`${process.env.REACT_APP_URL_BACKEND}/tweet/random`, {
             _id: id,
             political: value
         });
