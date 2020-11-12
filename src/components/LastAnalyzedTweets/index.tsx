@@ -1,80 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Tweet from '../Tweet';
-import { ITweetResume } from '../../util/interfaces';
 import './index.scss';
+import axios from 'axios';
  
 const LastAnalyzedTweets = () => {
-    const tweets: Array<ITweetResume> = [
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            date: "20/10/12",
-            polarizationRate: "80%",
-            politicalRate: "60%",
-            profileLink: "https://twitter.com/Juan_PRH",
-            tweetLink: "https://twitter.com/Juan_PRH/status/1313332363406049281",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            date: "20/10/12",
-            polarizationRate: "80%",
-            politicalRate: "60%",
-            profileLink: "https://twitter.com/Juan_PRH",
-            tweetLink: "https://twitter.com/Juan_PRH/status/1313332363406049281",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            date: "20/10/12",
-            polarizationRate: "80%",
-            politicalRate: "60%",
-            profileLink: "https://twitter.com/Juan_PRH",
-            tweetLink: "https://twitter.com/Juan_PRH/status/1313332363406049281",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            date: "20/10/12",
-            polarizationRate: "80%",
-            politicalRate: "60%",
-            profileLink: "https://twitter.com/Juan_PRH",
-            tweetLink: "https://twitter.com/Juan_PRH/status/1313332363406049281",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            date: "20/10/12",
-            polarizationRate: "80%",
-            politicalRate: "60%",
-            profileLink: "https://twitter.com/Juan_PRH",
-            tweetLink: "https://twitter.com/Juan_PRH/status/1313332363406049281",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            date: "20/10/12",
-            polarizationRate: "80%",
-            politicalRate: "60%",
-            profileLink: "https://twitter.com/Juan_PRH",
-            tweetLink: "https://twitter.com/Juan_PRH/status/1313332363406049281",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            date: "20/10/12",
-            polarizationRate: "80%",
-            politicalRate: "60%",
-            profileLink: "https://twitter.com/Juan_PRH",
-            tweetLink: "https://twitter.com/Juan_PRH/status/1313332363406049281",
-        },
-    ];
+    const [lastTweets, setLastTweets] = useState([]);
+
+    useEffect(() => {
+        const getLastTweets = async () => {
+            const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/latest`);
+            setLastTweets(response.data);
+            console.log(response.data);
+        };
+
+        getLastTweets();
+    }, []);
 
     return (
         <div className="lastAnalized-container">
             <h2 className="ultimos-p">Últimos tweets analizados</h2>
             <div className="lastAnalized-tweet-list">
-                {tweets.map(tweet => (
+                {lastTweets.map(tweet => (
                     <Tweet tweet={tweet}/>
                 ))}
             </div>
