@@ -2,6 +2,7 @@
     background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 10px 20px;
     border-radius: 20px;
@@ -21,5 +22,10 @@
 
     .tweet-two {
         text-align: end;
+
+        p {
+            white-space: nowrap;
+            margin-left: 10px;
+        }
     }
 }
