@@ -7,6 +7,7 @@ import Header from './components/Header';
 import IncidencesTopUsers from './components/IncidencesTopUsers';
 import LastAnalyzedTweets from './components/LastAnalyzedTweets';
 import Classificaction from './components/Classification';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -14,12 +15,11 @@ function App() {
       <Router>
         <Header />
         <div className="home-container">
-          {console.log()}
           <LastAnalyzedTweets />
             <Switch>
               <Route path="/" exact component={ChartsHome} />
               <Route path="/classification" component={Classificaction} />
-              {/* <Route path="/user" component={Profile} /> */}
+              <Route path="/:user" component={Profile} />
             </Switch>
           <div className="home-otherData">
             <AnalyzedTweets />

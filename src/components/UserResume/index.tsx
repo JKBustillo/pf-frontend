@@ -1,21 +1,18 @@
 import React from 'react';
 import { IUserResume } from '../../util/interfaces';
+import { Link } from 'react-router-dom';
 import './index.scss';
  
 const UserResume = (props: { user: IUserResume }) => {
     return (
         <div className="user-container">
             <div className="user-left">
-                <p>{props.user.username}</p>
-                <p>{props.user.user}</p>
+                <p>{props.user.name}</p>
+                <p>@{props.user.username}</p>
             </div>
             <div className="user-right">
-                <p>{props.user.incidences}</p>
-                <a
-                    href={props.user.profileLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >Ir al perfil</a>
+                <p>Incidencias: {props.user.counter}</p>
+                <p><Link to={props.user.username}>Ir al perfil</Link></p>
             </div>
         </div>
     );

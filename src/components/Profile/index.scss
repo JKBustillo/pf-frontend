@@ -1,0 +1,72 @@
+.profile-container {
+    width: 40%;
+    padding: 20px 30px;
+    background-color: white;
+    height: calc(100vh - 104px);
+    overflow-y: scroll;
+
+    .profile-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .profile-name {
+            display: flex;
+            align-items: center;
+
+            h2 {
+                margin-right: 20px;
+                font-size: 33px;
+            }
+        }
+
+        p {
+            text-align: end;
+        }
+    }
+
+    .profile-stats {
+        .incidences {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .graph {
+            width: 150px;
+            height: 150px;
+            background-color: rgb(47, 255, 92);
+            margin: 20px auto;
+        }
+
+        .polarizing-percentage {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    .br {
+        margin-top: 20px;
+        width: calc(100% + 60px);
+        height: 2px;
+        background-color: gray;
+        margin-left: -30px;
+    }
+
+    .profile-lastTweets {
+        height: 400px;
+
+        .ultimos-p {
+            margin: 20px 20px 20px;
+        }
+    
+        .lastAnalized-tweet-list {
+            height: 357px;
+            overflow-y: scroll;
+        }
+    }
+}
