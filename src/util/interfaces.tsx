@@ -8,11 +8,16 @@ export interface ITweetResume {
     tweetLink: string,
 };
 
+export interface ILocation {
+    latitude: number,
+    longitude: number,
+};
+
 export interface IUserResume {
+    _id: string,
+    name: string,
     username: string,
-    user: string,
-    incidences: number,
-    profileLink: string,
+    counter: number,
 };
 
 export interface IParams {
