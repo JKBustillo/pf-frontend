@@ -1,8 +1,13 @@
 .chartsHome-container {
-    width: auto;
+    width: 40%;
     // height: auto;
 
+    .chart-home {
+        height: 50%;
+        width: 100%;
+    }
+
     .map {
-        height: 270px;
+        height: 50%;
     }
 }

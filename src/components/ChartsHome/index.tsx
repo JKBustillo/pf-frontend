@@ -19,18 +19,20 @@ const state = {
 const ChartsHome = () => {
     return (
         <div className="chartsHome-container">
-            <Line
-                data={state}
-                height={280}
-                width={560}
-                options={{
-                    title:{
-                        display:true,
-                        text:'Gráfica de tweets polarizantes analizados',
-                        fontSize:20
-                    },
-                }}
-            />
+            <div className="chart-home">
+                <Line
+                    data={state}
+                    options={{
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        title:{
+                            display:true,
+                            text:'Gráfica de tweets polarizantes analizados',
+                            fontSize:20
+                        },
+                    }}
+                />
+            </div>
             <Map className="map" center={[4.60971, -74.08175]} zoom={6}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
