@@ -1,11 +1,11 @@
 export interface ITweetResume {
+    _id: string,
+    tweetId: string,
+    name: string,
     username: string,
-    user: string,
-    date: string,
-    polarizationRate: string,
-    politicalRate: string,
-    profileLink: string,
-    tweetLink: string,
+    createdAt: string,
+    // polarizationRate: string,
+    // politicalRate: string,
 };
 
 export interface ILocation {
