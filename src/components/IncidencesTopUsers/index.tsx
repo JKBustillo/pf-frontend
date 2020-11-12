@@ -1,59 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './index.scss';
-import { IUserResume } from '../../util/interfaces';
 import UserResume from '../UserResume';
  
 const IncidencesTopUsers = () => {
-    const users: Array<IUserResume> = [
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            incidences: 130,
-            profileLink: "https://twitter.com/Juan_PRH",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            incidences: 130,
-            profileLink: "https://twitter.com/Juan_PRH",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            incidences: 130,
-            profileLink: "https://twitter.com/Juan_PRH",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            incidences: 130,
-            profileLink: "https://twitter.com/Juan_PRH",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            incidences: 130,
-            profileLink: "https://twitter.com/Juan_PRH",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            incidences: 130,
-            profileLink: "https://twitter.com/Juan_PRH",
-        },
-        {
-            username: "Ninja",
-            user: "@Ninja",
-            incidences: 130,
-            profileLink: "https://twitter.com/Juan_PRH",
-        },
-    ];
+    const [topUsers, setTopUsers] = useState([]);
+
+    useEffect(() => {
+        const getTopUsers = async () => {
+            const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/common`);
+            setTopUsers(response.data);
+        };
+
+        getTopUsers();
+    }, []);
     
     return (
         <div className="topUsers-container">
             <p className="topUsers-p">Usuarios con más incidencias</p>
             <div className="topUsers-list">
-                {users.map(user => (
+                {topUsers.map(user => (
                     <UserResume user={user}/>
                 ))}
             </div>
