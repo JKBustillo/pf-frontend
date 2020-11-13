@@ -18,6 +18,7 @@ export interface IUserResume {
     name: string,
     username: string,
     counter: number,
+    verified: boolean,
 };
 
 export interface IParams {
