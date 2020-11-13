@@ -9,5 +9,9 @@
 
     .map {
         height: 50%;
+
+        .leaflet-marker-icon.leaflet-interactive {
+            pointer-events: none;
+        }
     }
 }
