@@ -8,6 +8,11 @@ export interface ITweetResume {
     // politicalRate: string,
 };
 
+export interface ICluster {
+    count: number,
+    lcoation: ILocation,
+};
+
 export interface ILocation {
     latitude: number,
     longitude: number,
