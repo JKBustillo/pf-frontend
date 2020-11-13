@@ -10,7 +10,6 @@ const LastAnalyzedTweets = () => {
         const getLastTweets = async () => {
             const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/latest`);
             setLastTweets(response.data);
-            console.log(response.data);
         };
 
         getLastTweets();
