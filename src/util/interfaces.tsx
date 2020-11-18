@@ -27,5 +27,6 @@ export interface IUserResume {
 };
 
 export interface IParams {
-    user: string
+    user: string,
+    tweetid: string,
 };
