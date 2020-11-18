@@ -22,8 +22,27 @@ export interface IUserResume {
     _id: string,
     name: string,
     username: string,
-    counter: number,
+    counter: ICounter,
     verified: boolean,
+};
+
+export interface ITweetDetails {
+    tweet: ITweetDetailsResume,
+    user: IUserResume,
+};
+
+export interface ITweetDetailsResume {
+    createdAt: string,
+    political: boolean,
+    text: string,
+    sentimentScore: {
+        negative: number,
+    }
+};
+
+export interface ICounter {
+    political: number,
+    hate: number,
 };
 
 export interface IParams {
