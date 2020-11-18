@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './index.scss';
  
 const AnalyzedTweets= () => {
+    const [totalAnalyzed, setTotalAnalyzed] = useState(0);
+    const [todayAnalyzed, setTodayAnalyzed] = useState(0);
+
+    useEffect(() => {
+        const getAnalyzedTweets = async () => {
+            const url = `${process.env.REACT_APP_URL_BACKEND}/tweet/count/today`;
+            const url2 = `${process.env.REACT_APP_URL_BACKEND}/tweet/count`;
+
+            const [today, total] = await Promise.all([
+                axios(url),
+                axios(url2)
+            ]);
+
+            setTodayAnalyzed(today.data.count);
+            setTotalAnalyzed(total.data.count);
+        };
+
+        getAnalyzedTweets();
+    }, []);
+
     return (
         <div className="analyzedTweets-containter">
             <p>Tweets analizados</p>
@@ -12,8 +33,8 @@ const AnalyzedTweets= () => {
                     <h2>Total</h2>
                 </div>
                 <div className="analyzedTweets-right">
-                    <h2>2301</h2>
-                    <h2>2000312</h2>
+                    <h2>{todayAnalyzed}</h2>
+                    <h2>{totalAnalyzed}</h2>
                 </div>
             </div>
         </div>
