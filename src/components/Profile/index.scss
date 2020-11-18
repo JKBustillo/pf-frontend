@@ -12,17 +12,18 @@
         margin-bottom: 20px;
 
         .profile-name {
-            display: flex;
-            align-items: center;
-
             h2 {
-                margin-right: 20px;
-                font-size: 33px;
+                margin-right: 15px;
+                font-size: 26px;
             }
         }
 
-        p {
+        .profile-other {
             text-align: end;
+
+            p {
+                padding-bottom: 4px;
+            }
         }
     }
 
@@ -46,6 +47,7 @@
             text-align: center;
             font-weight: bold;
             font-size: 20px;
+            margin-top: 10px;
         }
     }
 
