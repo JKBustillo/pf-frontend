@@ -11,7 +11,10 @@ const Profile = () => {
         _id: "",
         name: "",
         username: "",
-        counter: 0,
+        counter: {
+            political: 0,
+            hate: 0,
+        },
         verified: false,
     });
     const [userTweets, setUserTweets] = useState<Array<ITweetResume>>([]);
@@ -21,10 +24,9 @@ const Profile = () => {
     useEffect(() => {
         const getUserDetails = async () => {
             const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/username/${user}/details`);
-
-            setUserDetails(response.data);
-
             const response2 = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/user/${response.data.userId}`);
+            
+            setUserDetails(response.data);
             setUserTweets(response2.data);
         };
 
@@ -35,11 +37,11 @@ const Profile = () => {
         name: 'React',
         data: {
           datasets: [{
-            data: [userDetails.counter, 0],
+            data: [userDetails.counter.political-userDetails.counter.hate, userDetails.counter.hate],
             backgroundColor: ['#2F6DF1', '#087CB8'],
           }],
           labels: [
-            'Incidencias totales',
+            'Incidencias no polarizantes',
             'Incidencias polarizantes',
           ]
         }
@@ -54,18 +56,18 @@ const Profile = () => {
                 </div>
                 <div className="profile-other">
                     <p>{userDetails.verified ? "Verificado" : "No verificado"}</p>
-                    <a href={`https://www.twitter.com/${userDetails.username}`} target="_blank">Ir al perfil</a>
+                    <a href={`https://www.twitter.com/${userDetails.username}`} target="_blank" rel="noopener noreferrer">Ir al perfil</a>
                 </div>
             </div>
 
             <div className="profile-stats">
                 <div className="incidences">
                     <h3>Número de incidencias:</h3>
-                    <p>{userDetails.counter}</p>
+                    <p>{userDetails.counter.political}</p>
                 </div>
                 <div className="incidences">
                     <h3>Número de incidencias polarizantes:</h3>
-                    <p>0</p>
+                    <p>{userDetails.counter.hate}</p>
                 </div>
 
                 <Pie
@@ -75,13 +77,13 @@ const Profile = () => {
                     maintainAspectRatio: true,
                     }}
                 />
-                <p className="polarizing-percentage">{0/userDetails.counter*100}% polarizante</p>
+                <p className="polarizing-percentage">{userDetails.counter.hate/userDetails.counter.political*100}% polarizante</p>
             </div>
 
             <div className="br" />
 
             <div className="profile-lastTweets">
-                <h2 className="ultimos-p">Últimos tweets analizados</h2>
+                <h2 className="ultimos-p">Últimos tweets polarizantes</h2>
                 <div className="lastAnalized-tweet-list">
                     {userTweets.map(tweet => (
                         <Tweet tweet={tweet}/>
