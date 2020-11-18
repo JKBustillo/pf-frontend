@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.scss';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Header = () => {
+    const [search, setSearch] = useState("");
+    const history = useHistory();
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        setSearch("");
+        history.push(`/${search}`);
+    }
+
     return (
         <header>
             <div className="header-container">
                 <h2><Link to="/">Polarization Finder</Link></h2>
-                <div className="search">
-                    <input type="text" placeholder="Busca una cuenta de twitter" />
+                <form className="search" onSubmit={e => handleSubmit(e)}>
+                    <input
+                        type="text"
+                        placeholder="Busca una cuenta de twitter"
+                        name="search"
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                    />
                     {/* <button>Go</button> */}
-                </div>
-                <button className="header-about"><Link to="/classification">About us</Link></button>
+                </form>
+                <Link className="header-about" to="/classification">About us</Link>
             </div>
         </header>
     );
