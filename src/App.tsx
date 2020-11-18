@@ -8,6 +8,7 @@ import IncidencesTopUsers from './components/IncidencesTopUsers';
 import LastAnalyzedTweets from './components/LastAnalyzedTweets';
 import Classificaction from './components/Classification';
 import Profile from './components/Profile';
+import TweetDetails from './components/TweetDetails';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
             <Switch>
               <Route path="/" exact component={ChartsHome} />
               <Route path="/classification" component={Classificaction} />
-              <Route path="/:user" component={Profile} />
+              <Route path="/:user" exact component={Profile} />
+              <Route path="/:user/:tweetid" component={TweetDetails} />
             </Switch>
           <div className="home-otherData">
             <AnalyzedTweets />
