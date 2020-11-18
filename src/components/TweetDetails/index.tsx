@@ -41,9 +41,6 @@ const TweetDetails = () => {
 
     const { tweet, user } = tweetDetails;
 
-    var momentString = moment(new Date(tweet.createdAt)).format('YYYY-MM-DD');
-    console.log(momentString);
-
     return (
         <div className="tweetDetails-container">
             <div className="tweetDetails-top">
