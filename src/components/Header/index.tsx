@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <div className="header-container">
-                <h2><Link to="/">Texto de ejemplo</Link></h2>
+                <h2><Link to="/">Polarization Finder</Link></h2>
                 <div className="search">
                     <input type="text" placeholder="Busca una cuenta de twitter" />
                     {/* <button>Go</button> */}
