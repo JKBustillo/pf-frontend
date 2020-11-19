@@ -3,7 +3,12 @@
     padding: 20px 30px;
     background-color: white;
     height: calc(100vh - 104px);
-    overflow-y: scroll;
+    overflow-y: auto;
+
+    @media (max-width: 1000px) {
+        margin-top: 20px;
+        width: 100%;
+    }
 
     .profile-top {
         display: flex;
@@ -23,6 +28,15 @@
 
             p {
                 padding-bottom: 4px;
+            }
+
+            a {
+                color: #2F6DF1;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -64,11 +78,12 @@
 
         .ultimos-p {
             margin: 20px 20px 20px;
+            text-align: center;
         }
     
         .lastAnalized-tweet-list {
             height: 357px;
-            overflow-y: scroll;
+            overflow-y: auto;
         }
     }
 }

@@ -10,9 +10,17 @@
     .ultimos-p {
         margin: 0 20px 20px;
         text-align: center;
+
+        @media (max-width: 1000px) {
+            font-size: 22px;
+        }
     }
 
     .lastAnalized-tweet-list {
-        overflow-y: scroll;
+        overflow-y: auto;
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
     }
 }
