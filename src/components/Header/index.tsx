@@ -22,6 +22,7 @@ const Header = () => {
                         placeholder="Busca una cuenta de twitter"
                         name="search"
                         value={search}
+                        autoComplete="off"
                         onChange={e => setSearch(e.target.value)}
                     />
                 </form>
