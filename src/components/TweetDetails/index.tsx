@@ -33,7 +33,6 @@ const TweetDetails = () => {
             const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/${tweetid}/details`);
 
             setTweetDetails(response.data);
-            console.log(response.data);
         };
 
         getUserDetails();
