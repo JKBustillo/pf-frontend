@@ -86,7 +86,10 @@ const Profile = () => {
                 <h2 className="ultimos-p">Últimos tweets polarizantes</h2>
                 <div className="lastAnalized-tweet-list">
                     {userTweets.map(tweet => (
-                        <Tweet tweet={tweet}/>
+                        <Tweet
+                            key={tweet._id}
+                            tweet={tweet}
+                        />
                     ))}
                 </div>
             </div>
