@@ -7,12 +7,12 @@ import './index.scss';
 import { ICluster, ILocation } from '../../util/interfaces';
 
 const state = {
-    labels: ['January', 'February', 'March', 'April', 'May'],
+    labels: ['12/11', '13/11', '14/11', '15/11', '16/11', '17/11', '18/11'],
     datasets: [
         {
             label: 'Incidencias',
             borderWidth: 2,
-            data: [65, 59, 80, 81, 56],
+            data: [13, 12, 15, 19, 11, 12, 11],
             fill: true,
             backgroundColor: '#c8daff',
             borderColor: '#2F6DF1'
@@ -52,6 +52,13 @@ const ChartsHome = () => {
                             text:'Gráfica de tweets polarizantes analizados',
                             fontSize:20
                         },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
                     }}
                 />
             </div>
