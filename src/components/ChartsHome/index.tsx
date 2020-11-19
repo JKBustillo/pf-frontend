@@ -11,9 +11,11 @@ const state = {
     datasets: [
         {
             label: 'Incidencias',
-            borderColor: 'rgba(0,0,0,1)',
             borderWidth: 2,
-            data: [65, 59, 80, 81, 56]
+            data: [65, 59, 80, 81, 56],
+            fill: true,
+            backgroundColor: '#c8daff',
+            borderColor: '#2F6DF1'
         }
     ],
 }
