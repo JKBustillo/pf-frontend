@@ -4,8 +4,9 @@ export interface ITweetResume {
     name: string,
     username: string,
     createdAt: string,
-    // polarizationRate: string,
-    // politicalRate: string,
+    sentimentScore: {
+        negative: number,
+    }
 };
 
 export interface ICluster {
