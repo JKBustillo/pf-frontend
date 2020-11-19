@@ -12,18 +12,17 @@ const Tweet = (props: {tweet: ITweetResume}) => {
                 <p>{props.tweet.createdAt.substring(0, props.tweet.createdAt.indexOf("T"))}</p>
             </div>
             <div className="tweet-two">
-                {/* <p>Polarización: {props.tweet.polarizationRate}</p>
-                <p>Político: {props.tweet.politicalRate}</p> */}
-                <p>Polarización: 70</p>
-                <p>Político: 30</p>
+                <p>Polarización: {(props.tweet.sentimentScore.negative*100).toFixed(1)}%</p>
                 <p>
                     <Link
                         to={`/${props.tweet.username}`}
-                    >Perfil</Link>
+                    >Detalles del perfil</Link>
                     &nbsp;
+                </p>
+                <p>
                     <Link
                         to={`/${props.tweet.username}/${props.tweet.tweetId}`}
-                    >Detalles</Link>
+                    >Detalles del tweet</Link>
                 </p>
             </div>
         </div>
