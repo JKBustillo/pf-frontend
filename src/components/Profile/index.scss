@@ -2,7 +2,8 @@
     width: 40%;
     padding: 20px 30px;
     background-color: white;
-    height: calc(100vh - 104px);
+    height: 100%;
+    max-height: calc(100vh - 104px);
     overflow-y: auto;
 
     @media (max-width: 1000px) {
