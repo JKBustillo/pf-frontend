@@ -15,6 +15,10 @@
     .user-left {
         text-align: start;
 
+        .profile-name {
+            font-weight: bold;
+        }
+
         p {
             -ms-word-break: break-all;
             word-break: break-all;

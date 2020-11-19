@@ -7,7 +7,7 @@ const UserResume = (props: { user: IUserResume }) => {
     return (
         <div className="user-container">
             <div className="user-left">
-                <p>{props.user.name}</p>
+                <p className="profile-name">{props.user.name}</p>
                 <p>@{props.user.username}</p>
             </div>
             <div className="user-right">
