@@ -24,9 +24,8 @@ const Header = () => {
                         value={search}
                         onChange={e => setSearch(e.target.value)}
                     />
-                    {/* <button>Go</button> */}
                 </form>
-                <Link className="header-about" to="/classification">About us</Link>
+                <Link className="header-about" to="/classification">Clasificación</Link>
             </div>
         </header>
     );
