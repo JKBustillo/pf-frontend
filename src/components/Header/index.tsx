@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <header>
             <div className="header-container">
-                <h2><Link to="/">Polarization Finder</Link></h2>
+                <h2><Link to="/">Polify</Link></h2>
                 <form className="search" onSubmit={e => handleSubmit(e)}>
                     <input
                         type="text"
