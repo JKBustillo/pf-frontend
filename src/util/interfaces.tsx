@@ -50,3 +50,8 @@ export interface IParams {
     user: string,
     tweetid: string,
 };
+
+export interface IGraph {
+    _id: string,
+    counter: number,
+};
