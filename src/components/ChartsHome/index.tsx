@@ -4,34 +4,48 @@ import { Map, Marker, TileLayer } from 'react-leaflet';
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import axios from 'axios';
 import './index.scss';
-import { ICluster, ILocation } from '../../util/interfaces';
+import { ICluster, ILocation, IGraph } from '../../util/interfaces';
 
-const state = {
-    labels: ['12/11', '13/11', '14/11', '15/11', '16/11', '17/11', '18/11'],
-    datasets: [
-        {
-            label: 'Incidencias',
-            borderWidth: 2,
-            data: [13, 12, 15, 19, 11, 12, 11],
-            fill: true,
-            backgroundColor: '#c8daff',
-            borderColor: '#2F6DF1'
-        }
-    ],
-}
- 
 const ChartsHome = () => {
     const [locations, setLocations] = useState<Array<ICluster>>([]);
+    const [realLabels, setRealLabels] = useState<Array<string>>([]);
+    const [realData, setRealData] = useState<Array<number>>([]);
+    const labels2: Array<string> = [];
+    const data2: Array<number> = [];
     const markers: Array<ILocation> = [];
 
     useEffect(() => {
         const getLocations = async () => {
             const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/location`);
             setLocations(response.data);
+
+            const responseGraph = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/graph`);
+
+            responseGraph.data.map((data:IGraph) => {
+                data2.push(data.counter);
+                labels2.push(data._id.substring(5, data._id.length));
+            });
+
+            setRealData(data2);
+            setRealLabels(labels2);
         };
 
         getLocations();
     }, []);
+
+    const state = {
+        labels: realLabels,
+        datasets: [
+            {
+                label: 'Incidencias',
+                borderWidth: 2,
+                data: realData,
+                fill: true,
+                backgroundColor: '#c8daff',
+                borderColor: '#2F6DF1'
+            }
+        ],
+    }
 
     locations.forEach(location => {
         for (let i = 0; i < location.count; i++) {
