@@ -21,7 +21,7 @@ const ChartsHome = () => {
 
             const responseGraph = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/graph`);
 
-            responseGraph.data.map((data:IGraph) => {
+            responseGraph.data.forEach((data:IGraph) => {
                 data2.push(data.counter);
                 labels2.push(data._id.substring(5, data._id.length));
             });
@@ -31,7 +31,7 @@ const ChartsHome = () => {
         };
 
         getLocations();
-    }, []);
+    }, []); // eslint-disable-line
 
     const state = {
         labels: realLabels,
