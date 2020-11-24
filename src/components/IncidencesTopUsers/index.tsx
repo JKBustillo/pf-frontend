@@ -9,7 +9,7 @@ const IncidencesTopUsers = () => {
 
     useEffect(() => {
         const getTopUsers = async () => {
-            const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/common`);
+            const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/region/common`);
             setTopUsers(response.data);
         };
 
@@ -18,7 +18,7 @@ const IncidencesTopUsers = () => {
     
     return (
         <div className="topUsers-container">
-            <p className="topUsers-p">Usuarios con más incidencias</p>
+            <p className="topUsers-p">Regiones más polarizantes</p>
             <div className="topUsers-list">
                 {topUsers.map(user => (
                     <UserResume
