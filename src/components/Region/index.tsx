@@ -81,7 +81,7 @@ const Region = () => {
                     <div className="br" />
 
                     <div className="profile-lastTweets">
-                        {regionDetails.randomTweets.length == 0 ? 
+                        {regionDetails.randomTweets.length === 0 ? 
                             <h1>No hay tweets polarizantes en esta región.</h1>
                         :
                             <Fragment>
