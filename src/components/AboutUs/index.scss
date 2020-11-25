@@ -3,6 +3,12 @@
     width: 55%;
     padding: 20px;
 
+    
+    @media (max-width: 600px) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
     .about-text {
         text-align: center;
         font-weight: bold;
@@ -15,10 +21,21 @@
         justify-content: space-between;
         margin-bottom: 20px;
 
+        @media (max-width: 600px) {
+            justify-content: center;
+            flex-direction: column;
+        }
+
         .aboutus-card {
             img {
                 width: 150px;
                 border-radius: 10px;
+                
+                @media (max-width: 600px) {
+                    display: block;
+                    margin: auto;
+                    margin-top: 10px;
+                }
             }
 
             p {
