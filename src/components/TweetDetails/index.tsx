@@ -12,6 +12,9 @@ const TweetDetails = () => {
             createdAt: "",
             political: false,
             text: "",
+            accuracy: {
+                political: 0,
+            },
             sentimentScore: {
                 negative: 0
             }
@@ -127,7 +130,7 @@ const TweetDetails = () => {
                     <div className="tweetDetails-stats">
                         <div className="tweetDetails-incidences">
                             <h3>Político:</h3>
-                            <p>{tweet.political === true ? "Sí" : "No"}</p>
+                            <p>{(tweet.accuracy.political*100).toFixed(1)}%</p>
                         </div>
                         <div className="tweetDetails-incidences">
                             <h3>Nivel de odio:</h3>
