@@ -35,7 +35,6 @@ const TweetRegion = (props: { region: string, tweetId: string, text: string }) =
                 const response = await axios(`${process.env.REACT_APP_URL_BACKEND}/tweet/${props.tweetId}/details`);
                 
                 setTweetDetails(response.data);
-                console.log(response.data);
             } catch (error) {
             }
         };

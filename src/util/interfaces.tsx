@@ -71,3 +71,7 @@ export interface IGraph {
     _id: string,
     counter: number,
 };
+
+export interface IRegion {
+    _id: string,
+};
