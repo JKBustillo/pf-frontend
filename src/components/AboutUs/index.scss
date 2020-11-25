@@ -1,0 +1,43 @@
+.aboutus-container {
+    background-color: white;
+    width: 40%;
+    padding: 20px;
+
+    .about-text {
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .aboutus-data {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .aboutus-card {
+            img {
+                width: 150px;
+                border-radius: 10px;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            a {
+                text-align: center;
+                display: block;
+
+                img {
+                    margin-top: 10px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .aboutus-textContent {
+        text-align: justify;
+    }
+}
