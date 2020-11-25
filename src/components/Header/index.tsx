@@ -26,7 +26,7 @@ const Header = () => {
                         onChange={e => setSearch(e.target.value)}
                     />
                 </form>
-                <Link className="header-about" to="/classification">Clasificación</Link>
+                <button className="header-about">Sobre nosotros</button>
             </div>
         </header>
     );
