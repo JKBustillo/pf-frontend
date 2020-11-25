@@ -36,10 +36,25 @@ export interface ITweetDetailsResume {
     createdAt: string,
     political: boolean,
     text: string,
+    accuracy: {
+        political: number,
+    }
     sentimentScore: {
         negative: number,
     }
 };
+
+export interface IRegionDetails {
+    political: number,
+    hate: number,
+    randomTweets: Array<IRandomTweet>
+};
+
+export interface IRandomTweet {
+    _id: string,
+    tweetId: string,
+    text: string
+}
 
 export interface ICounter {
     political: number,
@@ -49,6 +64,7 @@ export interface ICounter {
 export interface IParams {
     user: string,
     tweetid: string,
+    region: string,
 };
 
 export interface IGraph {
