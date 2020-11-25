@@ -18,7 +18,8 @@ function App() {
       <Router>
         <Header />
         <div className="home-container">
-          <LastAnalyzedTweets />
+          <div className="home-first">
+            <LastAnalyzedTweets />
             <Switch>
               <Route path="/" exact component={ChartsHome} />
               <Route path="/classification" component={Classificaction} />
@@ -27,6 +28,7 @@ function App() {
               <Route path="/region/:region" exact component={Region} />
               <Route path="/:user/:tweetid" component={TweetDetails} />
             </Switch>
+          </div>
           <div className="home-otherData">
             <AnalyzedTweets />
             <IncidencesTopUsers />
