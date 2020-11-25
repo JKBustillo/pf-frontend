@@ -81,17 +81,23 @@ const Region = () => {
                     <div className="br" />
 
                     <div className="profile-lastTweets">
-                        <h2 className="ultimos-p">Algunos tweets polarizantes</h2>
-                        <div className="lastAnalized-tweet-list">
-                            {regionDetails.randomTweets.map(tweet => (
-                                <TweetRegion
-                                    key={tweet._id}
-                                    region={region}
-                                    tweetId={tweet.tweetId}
-                                    text={tweet.text}
-                                />
-                            ))}
-                        </div>
+                        {regionDetails.randomTweets.length == 0 ? 
+                            <h1>No hay tweets polarizantes en esta región.</h1>
+                        :
+                            <Fragment>
+                                <h2 className="ultimos-p">Algunos tweets polarizantes</h2>
+                                <div className="lastAnalized-tweet-list">
+                                    {regionDetails.randomTweets.map(tweet => (
+                                        <TweetRegion
+                                            key={tweet._id}
+                                            region={region}
+                                            tweetId={tweet.tweetId}
+                                            text={tweet.text}
+                                        />
+                                    ))}
+                                </div>
+                            </Fragment>
+                        }
                     </div>
                 </Fragment>
             }
