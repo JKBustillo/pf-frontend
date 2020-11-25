@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <header>
             <div className="header-container">
-                <h2><Link to="/">Polify</Link></h2>
+                <h2><Link to="/"><span>P</span>oli<span>F</span>y</Link></h2>
                 <form className="search" onSubmit={e => handleSubmit(e)}>
                     <input
                         type="text"
@@ -26,7 +26,7 @@ const Header = () => {
                         onChange={e => setSearch(e.target.value)}
                     />
                 </form>
-                <button className="header-about">Sobre nosotros</button>
+                <Link className="header-about" to="/aboutus">Sobre nosotros</Link>
             </div>
         </header>
     );

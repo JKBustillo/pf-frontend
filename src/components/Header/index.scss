@@ -10,11 +10,16 @@ header {
         margin: auto;
 
         h2 {
-            margin: 20px 0;
+            margin: 15px 0;
+            font-size: 30px;
 
             a {
                 text-decoration: none;
                 color: black;
+
+                span {
+                    color: #2F6DF1;
+                }
             }
         }
 
