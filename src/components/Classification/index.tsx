@@ -31,8 +31,8 @@ const Classificaction = () => {
         <div className="classification">
             <p>{text}</p>
             <p>{sentimental}</p>
-            <button className="pol" onClick={() => updatePolitical(true)}>Politico</button>
-            <button className="nopol" onClick={() => updatePolitical(false)}>No politico</button>
+            <button className="pol" onClick={() => updatePolitical(true)}>Polarizante</button>
+            <button className="nopol" onClick={() => updatePolitical(false)}>No polarizante</button>
             <button className="new-tweet" onClick={() => getTweet()}>New Tweet</button>
         </div>
     );
