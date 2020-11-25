@@ -1,0 +1,71 @@
+.tweetRegion-container {
+    width: 100%;
+    max-height: calc(100vh - 104px);
+    padding: 20px 30px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .tweetRegion-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .tweetRegion-name {
+            width: 70%;
+
+            h3 {
+                margin-right: 15px;
+                font-size: 26px;
+            }
+        }
+
+        .tweetRegion-other {
+            text-align: end;
+
+            p {
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    .tweetRegion-content {
+        margin-bottom: 20px;
+    }
+
+    .tweetRegion-stats {
+        display: flex;
+        justify-content: space-between;
+
+        .tweetRegion-incidences {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 23px;
+
+            h3 {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .tweetRegion-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+
+        a {
+            color: #2F6DF1;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .other-tweets {
+        margin: 15px 0;
+    }
+}
