@@ -114,8 +114,7 @@ const TweetDetails = () => {
                 <Fragment>
                     <div className="tweetDetails-top">
                         <div className="tweetDetails-name">
-                            <h2>{user.name}</h2>
-                            <p>@{user.username}</p>
+                            <h2>@{user.username}</h2>
                         </div>
                         <div className="tweetDetails-other">
                             <p>{user.verified ? "Verificado" : "No verificado"}</p>
@@ -138,8 +137,7 @@ const TweetDetails = () => {
                         </div>
                     </div>
 
-                    <div className="tweetDetails-links">    
-                        <a href={`https://www.twitter.com/${user.username}`} target="_blank" rel="noopener noreferrer">Ir al perfil</a>
+                    <div className="tweetDetails-links">
                         <a href={`https://www.twitter.com/${user.username}/status/${tweetid}`} target="_blank" rel="noopener noreferrer">Ir al tweet</a>
                     </div>
 
