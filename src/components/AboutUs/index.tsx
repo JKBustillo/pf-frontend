@@ -1,9 +1,5 @@
 import React from 'react';
 import './index.scss';
-
-import William from '../../assets/photos/William.png';
-import Jose from '../../assets/photos/Jose.png';
-import Rambalt from '../../assets/photos/Rambalt.jpg';
  
 const AboutUs = () => {
     return (
@@ -12,17 +8,17 @@ const AboutUs = () => {
 
             <div className="aboutus-data">
                 <div className="aboutus-card">
-                    <img src={William} alt="william" />
+                    <img src="https://puu.sh/GRxGE/0267466d1c.png" alt="william" />
                     <p>William Atencia</p>
                     <a href="https://github.com/KodeWil"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" alt="git" /></a>
                 </div>
                 <div className="aboutus-card">
-                    <img src={Jose} alt="jose" />
+                    <img src="https://puu.sh/GRxGH/5e41ae16ff.png" alt="jose" />
                     <p>Jose Bustillo</p>
                     <a href="https://github.com/JKarmine"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" alt="git" /></a>
                 </div>
                 <div className="aboutus-card">
-                    <img src={Rambalt} alt="rambal" />
+                    <img src="https://puu.sh/GRxGD/105ddb7dd6.jpg" alt="rambal" />
                     <p>Juan Rambal</p>
                     <a href="https://github.com/herasj"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png" alt="git" /></a>
                 </div>
