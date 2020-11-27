@@ -46,8 +46,7 @@ const TweetRegion = (props: { region: string, tweetId: string, text: string }) =
         <div className="tweetRegion-container">
             <div className="tweetRegion-top">
                 <div className="tweetRegion-name">
-                    <h3>{tweetDetails.user.name}</h3>
-                    <p>@{tweetDetails.user.username}</p>
+                    <h3>@{tweetDetails.user.username}</h3>
                 </div>
                 <div className="tweetRegion-other">
                     <p>{tweetDetails.user.verified ? "Verificado" : "No verificado"}</p>
@@ -70,8 +69,7 @@ const TweetRegion = (props: { region: string, tweetId: string, text: string }) =
                 </div>
             </div>
 
-            <div className="tweetRegion-links">    
-                <a href={`https://www.twitter.com/${tweetDetails.user.username}`} target="_blank" rel="noopener noreferrer">Ir al perfil</a>
+            <div className="tweetRegion-links">
                 <a href={`https://www.twitter.com/${tweetDetails.user.username}/status/${props.tweetId}`} target="_blank" rel="noopener noreferrer">Ir al tweet</a>
             </div>
         </div>
